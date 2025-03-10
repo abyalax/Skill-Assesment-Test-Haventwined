@@ -1,3 +1,14 @@
+Table users {
+  id int [primary key, increment]
+  name string
+  email string [unique]
+  email_verified_at timestamp [null]
+  password string
+  remember_token string
+  created_at timestamp
+  updated_at timestamp
+}
+
 Table company_profiles {
   id bigint [primary key, increment]
   name varchar(255) [not null, default: '']
@@ -8,6 +19,7 @@ Table company_profiles {
   created_at timestamp [default: null]
   updated_at timestamp [default: null]
   location varchar(255) [default: null]
+  selected boolean [default: false]
 }
 
 Table events {
@@ -31,6 +43,6 @@ Table events {
   url varchar(255) [default: null]
   Indexes {
     (company_profile_id) [name: "events_company_profile_id_foreign"]
-    (name, content, category, theme, location, city, detailed_location) [name: "events_fulltext"]
+    (name, content, location, city, detailed_location) [name: "events_fulltext"]
   }
 }

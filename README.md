@@ -7,8 +7,12 @@
 
 ---
 
-# **Dokumentasi Setup Project Skill Assestment Web Company Profile Haventwined**  
+# **Project Skill Assessment Web Company Profile Haventwined**  
 
+### This repository contains the project required for the skill assessment test at Haventwined for the Web Developer Intern position.
+<img src="./docs/assestmen_test.png">
+
+# How to set up to your local
 ## **1. Clone Repository**  
 ```bash
 git clone https://github.com/abyalax/Skill-Assesment-Test-Havenwined.git
@@ -81,10 +85,26 @@ Setelah login, navigasikan ke **"Manage Company Profile"** di navbar atas untuk 
 - **Event dan aset lainnya:** disimpan di `public/images/`  
 - **Banner:** diunggah secara **dinamis** menggunakan **Cloudinary**  
 
-## **9. Next Development**  
+### 🚀 **Proyek siap dijalankan!**  
+Jika ada kendala, pastikan semua service sudah berjalan dan environment sudah dikonfigurasi dengan benar.
+
+### **Next Development**  
 - Implementasi **CRUD untuk Event Company**  
 - Integrasi dengan fitur tambahan jika diperlukan  
 
+---
+
+### DB Diagram
+<img src="./docs/db_diagram.png">
+
+---
+You can see and customize db_diagram.dbml at folder docs
+```
+└── 📁docs
+    └── assestmen_test.png
+    └── db_diagram.dbml
+    └── db_diagram.png
+```
 ---
 
 ### **Tech Stack**  
@@ -111,6 +131,3 @@ Setelah login, navigasikan ke **"Manage Company Profile"** di navbar atas untuk 
 - **Local Dev:** Laravel Sail, Mockery  
 
 🚀 **Stack ini digunakan untuk membangun aplikasi SSR Vue dengan Laravel sebagai backend serta integrasi Cloudinary untuk manajemen gambar.**
-
-### 🚀 **Proyek siap dijalankan!**  
-Jika ada kendala, pastikan semua service sudah berjalan dan environment sudah dikonfigurasi dengan benar.
