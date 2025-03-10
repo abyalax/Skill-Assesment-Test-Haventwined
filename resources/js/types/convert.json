@@ -1,0 +1,60 @@
+{
+    "current_page": 1,
+    "data": [
+      {
+        "id": 7,
+        "name": "Meez Fest",
+        "content": "## Tentang Event\n\n🎉 Nikmati pengalaman festival terbaik di Meez Fest!\n\nAcara ini menghadirkan konser musik, bazar kuliner, dan berbagai hiburan lainnya untuk Anda!\n\n🗓️ 27 Agustus 2024\n📍 Lokasi: Tamarald Event Centre\n\nSiapkan diri Anda untuk pesta yang tak terlupakan!",
+        "categories": [
+          "Festival",
+          "Musik",
+          "Hiburan"
+        ],
+        "themes": [
+          "Musik",
+          "Kuliner",
+          "Seni"
+        ],
+        "registration_start": "2024-06-15",
+        "registration_end": "2024-08-10",
+        "event_start": "2024-08-27",
+        "event_end": "2024-08-27",
+        "time": "16:00 - 23:00",
+        "estimated_visitors": 4000,
+        "location": "Tamarald Event Centre",
+        "city": "Jakarta",
+        "url": "/events/meez-fest.jpg",
+        "detailed_location": "Hall utama",
+        "company_profile_id": 1,
+        "created_at": null,
+        "updated_at": null
+      }
+    ],
+    "first_page_url": "http://localhost:8000/event?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "http://localhost:8000/event?page=1",
+    "links": [
+      {
+        "url": null,
+        "label": "&laquo; Previous",
+        "active": false
+      },
+      {
+        "url": "http://localhost:8000/event?page=1",
+        "label": "1",
+        "active": true
+      },
+      {
+        "url": null,
+        "label": "Next &raquo;",
+        "active": false
+      }
+    ],
+    "next_page_url": null,
+    "path": "http://localhost:8000/event",
+    "per_page": 10,
+    "prev_page_url": null,
+    "to": 1,
+    "total": 1
+  }

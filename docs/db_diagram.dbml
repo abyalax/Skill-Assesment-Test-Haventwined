@@ -1,0 +1,36 @@
+Table company_profiles {
+  id bigint [primary key, increment]
+  name varchar(255) [not null, default: '']
+  description text [not null]
+  email varchar(255) [not null]
+  whatsapp varchar(255) [default: null]
+  banner json [default: null]
+  created_at timestamp [default: null]
+  updated_at timestamp [default: null]
+  location varchar(255) [default: null]
+}
+
+Table events {
+  id bigint [primary key, increment]
+  name varchar(255) [not null]
+  content longtext [not null]
+  categories json [not null]
+  themes json [not null]
+  registration_start date [not null]
+  registration_end date [not null]
+  event_start date [not null]
+  event_end date [not null]
+  time varchar(255) [not null]
+  estimated_visitors int [not null]
+  location varchar(255) [not null]
+  city varchar(255) [not null]
+  detailed_location varchar(255) [not null]
+  company_profile_id bigint [not null, ref: > company_profiles.id]
+  created_at timestamp [default: null]
+  updated_at timestamp [default: null]
+  url varchar(255) [default: null]
+  Indexes {
+    (company_profile_id) [name: "events_company_profile_id_foreign"]
+    (name, content, category, theme, location, city, detailed_location) [name: "events_fulltext"]
+  }
+}
