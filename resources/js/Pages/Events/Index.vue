@@ -155,9 +155,10 @@ const handlePageSize = () => {
 
                 </div>
 
+                <!-- Modal Filtering -->
                 <Modal :show="openFilter" @close="openFilter = false">
                     <div class="flex flex-col justify-center gap-6 items-center h-fit p-8">
-                        <h1 class="text-2xl font-semibold">Modal untuk Filtering</h1>
+                        <h1 class="text-2xl font-semibold">Filter Events</h1>
                         <el-form :model="formFilter" label-width="auto" style="max-width: 600px">
                             <el-form-item label="Status">
                                 <el-radio-group v-model="formFilter.status">
@@ -209,7 +210,7 @@ const handlePageSize = () => {
                             <div className="absolute inset-0 bg-[#4e598c]/40 opacity-0 group-hover:opacity-100"></div>
                         </div>
                         <div class="w-full h-2/5 px-4 pb-6 pt-2">
-                            <p class="text-xs">{{ event.category }}</p>
+                            <p class="text-xs">{{ event.categories.join(', ') }}</p>
                             <h2 class="text-wrap font-bold text-xl">
                                 {{ event.name.length > 30 ? event.name.substring(0, 30) + '...' : event.name }}
                             </h2>

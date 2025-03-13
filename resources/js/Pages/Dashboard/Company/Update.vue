@@ -30,17 +30,6 @@ const handlerSubmit = () => {
         }
     });
 };
-onMounted(() => {
-    if (window.cloudinary) {
-        uploadWidget.value = window.cloudinary.createUploadWidget({
-            cloudName: 'dllhxulpv',
-            uploadPreset: 'haventwined',
-            multiple: true,
-            folder: 'haventwined',
-            maxFiles: 10,
-        }, handleUpload);
-    }
-});
 const openUploadWidget = () => {
     if (uploadWidget.value) {
         uploadWidget.value.open();
@@ -63,11 +52,22 @@ const removeBanner = (event: Event, index: number) => {
 const resetForm = () => {
     dataState.reset();
 };
+onMounted(() => {
+    if (window.cloudinary) {
+        uploadWidget.value = window.cloudinary.createUploadWidget({
+            cloudName: 'dllhxulpv',
+            uploadPreset: 'haventwined',
+            multiple: true,
+            folder: 'haventwined',
+            maxFiles: 10,
+        }, handleUpload);
+    }
+});
 </script>
 
 <template>
 
-        <AuthenticatedLayout >
+    <AuthenticatedLayout>
 
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Manage Company Profile</h2>
@@ -119,8 +119,9 @@ const resetForm = () => {
                     <div>
                         <div class="flex justify-start items-center gap-2 mt-4">
                             <el-button type="primary" @click="openUploadWidget">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;" width="20" height="20" fill="currentColor"
-                                    className="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;" width="20"
+                                    height="20" fill="currentColor" className="bi bi-cloud-arrow-up"
+                                    viewBox="0 0 16 16">
                                     <path fillRule="evenodd"
                                         d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708z" />
                                     <path

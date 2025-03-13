@@ -4,6 +4,9 @@
         "module": "ESNext",
         "moduleResolution": "bundler",
         "jsx": "preserve",
+        "jsxImportSource": "vue",
+        "jsxFactory": "h",
+        "jsxFragmentFactory": "Fragment",
         "strict": true,
         "isolatedModules": true,
         "target": "ESNext",
@@ -22,17 +25,15 @@
             "ziggy-js": [
                 "./vendor/tightenco/ziggy"
             ],
-            "vue": [
-                "./node_modules/vue/dist/vue.d.ts"
-            ]
-        }
-    },
-    "vueCompilerOptions": {
-        "experimentalDefinePropProposal": "johnsonEdition",
+        },
     },
     "include": [
         "resources/js/**/*.ts",
+        "resources/js/**/**/*.ts",
+        "resources/js/**/**/**/*.ts",
         "resources/js/**/*.d.ts",
-        "resources/js/**/*.vue"
-    ]
+        "resources/js/**/*.vue",
+        "resources/js/**/**/*.vue",
+        "resources/js/types/**/*.d.ts",
+    ],
 }
